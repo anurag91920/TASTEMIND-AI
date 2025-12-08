@@ -1,0 +1,11 @@
+.app {
+  background: #fff3e0;
+  color: #c62828;
+}
+
+.nav {
+  background: #ffccbc;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}

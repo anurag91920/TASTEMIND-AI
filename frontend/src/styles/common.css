@@ -1,0 +1,27 @@
+.page {
+  padding: 20px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.form-box input,
+.form-box textarea {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.card {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}

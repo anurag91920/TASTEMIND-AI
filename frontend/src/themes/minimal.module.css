@@ -1,0 +1,12 @@
+.app {
+  font-family: Arial;
+  background: white;
+  color: #003366;
+}
+
+.nav {
+  background: #e6f2ff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
