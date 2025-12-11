@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { db } from "./config/db.js";   // <<--- ADD THIS
 
 import authRoutes from "./routes/auth.routes.js";
 import menuRoutes from "./routes/menu.routes.js";
