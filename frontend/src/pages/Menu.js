@@ -18,6 +18,13 @@ import client from "../Assets/5e.png";
 
 export default function Menu() {
   const [loading, setLoading] = useState(true);
+  const [showMore, setShowMore] = useState(false);
+
+
+  const handleReadMore = () => {
+  setShowMore(!showMore);
+   };
+
 
   //  Safe API call
   const load = async () => {
@@ -74,8 +81,22 @@ export default function Menu() {
           <h2>About Us</h2>
           <h1>Welcome to Restoran</h1>
           <p>We serve the best food in town.</p>
-          <button className="btn">READ MORE</button>
+
+          {showMore && (
+            <p>
+             Restoran me hum fresh ingredients, experienced chefs aur best
+             customer service dete hain. Hamara aim hai ki har customer
+             satisfied rahe aur dobara aaye.
+            </p>
+          )}
+
+          <button className="btn" onClick={handleReadMore}>
+           {showMore ? "READ LESS" : "READ MORE"}
+          </button>
         </div>
+        <br />
+        <br />
+
 
         <div className="c-image">
           <img src={a} alt="about" />
@@ -91,12 +112,13 @@ export default function Menu() {
         <div className="book">
           <h2>Reservation</h2>
           <h1>Book A Table Online</h1>
-          <form>
-            <input placeholder="Name" />
-            <input placeholder="Email" />
-            <textarea placeholder="Message" />
-            <button>Send</button>
+          <form action="https://formspree.io/f/mzddpdja" method="POST">
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea name="message" placeholder="Message" required />
+              <button type="submit">Send</button>
           </form>
+
         </div>
       </div>
 
